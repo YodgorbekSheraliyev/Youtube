@@ -10,11 +10,11 @@ import account from "../../assets/icons/account.jpg";
 const Navbar = () => {
   return (
     <nav className="nav">
-      <ul className="nav__list container">
+      <ul className="nav__list container ">
         <li className="nav__item nav__item-menu">
           <img src={menu} alt="menu" className="burger__menu"/>
           <img src={youtube} alt="youtube" className="youtube__logo" />
-          <span>YouTube</span>
+          <span className="text-red">YouTube</span>
         </li>
         <li className="nav__item nav__item-searchbar">
           <input

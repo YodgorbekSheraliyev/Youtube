@@ -3,3 +3,12 @@
     font-size: 18px;
     font-family: 'Mulish', sans-serif;
 }
+body {
+    padding-top: 60px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}

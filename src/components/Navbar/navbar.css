@@ -2,13 +2,12 @@
   position: fixed;
   top: 0;
   width: 100%;
-  /* background-color: brown; */
+  background-color: #454545;
 }
 .nav__list,
 .nav__item-icon-wrapper {
   list-style: none;
-  /* background-color: aquamarine; */
-  padding: 5px 10px;
+  padding: 5px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +17,7 @@
   align-items: center;
   width: 15%;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-right: 2px solid red;
 }
 .burger__menu {
@@ -33,9 +32,11 @@
   left: 50px;
 }
 .searchbar__img {
-  position: absolute;
-  top: 55%;
-  right: 42%;
+  position: relative;
+  /* top: 55%; */
+  top: 12px;
+  /* right: 42%; */
+  right: 35px;
   transform: translateY(-50%);
 }
 .searchbar__input {
