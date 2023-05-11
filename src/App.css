@@ -4,7 +4,7 @@
     font-family: 'Mulish', sans-serif;
 }
 body {
-    padding-top: 60px;
+    position: relative;
 }
 ul {
     list-style: none;

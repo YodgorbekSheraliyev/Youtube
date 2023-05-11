@@ -29,17 +29,22 @@
 .nav__item-searchbar {
   position: relative;
   width: 75%;
-  left: 50px;
+  /* left: 50px; */
 }
 .searchbar__img {
   position: relative;
   /* top: 55%; */
-  top: 12px;
+  /* top: 12px; */
   /* right: 42%; */
-  right: 35px;
+  /* right: 35px; */
+  left: 54%;
   transform: translateY(-50%);
 }
 .searchbar__input {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
   width: 58%;
   font-size: 1rem;
   color: black;

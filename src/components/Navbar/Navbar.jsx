@@ -21,7 +21,7 @@ const Navbar = () => {
             type="text"
             placeholder="Search"
             className="searchbar__input"
-          />
+          /><br/>
           <img src={search} alt="search" className="searchbar__img" />
         </li>
         <li className="nav__item nav__item-icon-wrapper">

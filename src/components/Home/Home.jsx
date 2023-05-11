@@ -10,6 +10,8 @@ import Music from '../../assets/icons/music.svg';
 import Games from '../../assets/icons/game.svg';
 import Liked from '../../assets/icons/liked.svg';
 import Show from '../../assets/icons/show-more.svg';
+import Dollie from '../Dollie/Dollie';
+import dollie from '../../assets/icons/dollie.png'
 
 const Home = () => {
   return (
@@ -51,7 +53,12 @@ const Home = () => {
             <span className="aside__left-text">Show more</span></li>
         </ul>
       </aside>
-      <aside className='aside__right'></aside>
+      <aside className='aside__right'>
+        <div className="profile__wrapper">
+          <img src={dollie} alt="picture" /><span className='profile__text'>Dollie Blair</span>
+        </div>
+        <Dollie/>
+      </aside>
     </main>
   )
 }

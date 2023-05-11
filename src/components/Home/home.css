@@ -9,7 +9,7 @@
 }
 .main {
   display: flex;
-  padding-top: 20px;
+  padding: 80px 25px 10px 15px;
 }
 .aside__left {
   width: 15%;
@@ -28,4 +28,9 @@
 }
 .aside__left-text-home {
   color: red;
+}
+
+/* aside right */
+.aside__right {
+  width: 85%;
 }
