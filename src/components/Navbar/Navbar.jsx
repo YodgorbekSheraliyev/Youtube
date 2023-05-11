@@ -10,7 +10,7 @@ import account from "../../assets/icons/account.jpg";
 const Navbar = () => {
   return (
     <nav className="nav">
-      <ul className="nav__list container ">
+      <ul className="nav__list flex  ">
         <li className="nav__item nav__item-menu">
           <img src={menu} alt="menu" className="burger__menu"/>
           <img src={youtube} alt="youtube" className="youtube__logo" />
@@ -24,7 +24,7 @@ const Navbar = () => {
           /><br/>
           <img src={search} alt="search" className="searchbar__img" />
         </li>
-        <li className="nav__item nav__item-icon-wrapper">
+        <li className="nav__item nav__item-icon-wrapper flex">
           <img
             className="nav__icon-right nav__icon-right-video"
             src={video}

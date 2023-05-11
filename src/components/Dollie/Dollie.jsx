@@ -41,22 +41,15 @@ export default function Dollie() {
         navigation={true}modules={[Pagination, Navigation]}
         className="mySwiper">
            <SwiperSlide className="my-slide">Slide 1</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 2</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 3</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 4</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 5</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 6</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 7</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 8</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 9</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 9</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 9</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 9</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 9</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 9</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 9</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 9</SwiperSlide>
-           <SwiperSlide className="my-slide">Slide 9</SwiperSlide>
+           <SwiperSlide className="my-slide">Slide 1</SwiperSlide>
+           <SwiperSlide className="my-slide">Slide 1</SwiperSlide>
+           <SwiperSlide className="my-slide">Slide 1</SwiperSlide>
+           <SwiperSlide className="my-slide">Slide 1</SwiperSlide>
+           <SwiperSlide className="my-slide">Slide 1</SwiperSlide>
+           <SwiperSlide className="my-slide">Slide 1</SwiperSlide>
+           <SwiperSlide className="my-slide">Slide 1</SwiperSlide>
+           <SwiperSlide className="my-slide">Slide 1</SwiperSlide>
+           
       </Swiper>
     </>
   );
