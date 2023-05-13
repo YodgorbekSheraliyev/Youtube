@@ -14,12 +14,12 @@ const Navbar = () => {
         <li className="nav__item nav__item-menu">
           <img src={menu} alt="menu" className="burger__menu"/>
           <img src={youtube} alt="youtube" className="youtube__logo" />
-          <span className="text-red">YouTube</span>
+          <span className="text-red ">YouTube</span>
         </li>
         <li className="nav__item nav__item-searchbar">
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Searchch"
             className="searchbar__input"
           /><br/>
           <img src={search} alt="search" className="searchbar__img" />

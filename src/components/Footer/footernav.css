@@ -1,0 +1,23 @@
+
+.footer__nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer__nav li img {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+@media screen and (max-width:450px) {
+    .footer__nav {
+        padding: 8px 15px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        font-size: 14px;
+    }
+}

@@ -1,3 +1,5 @@
+import './register.css';
+import youtube from '../assets/icons/youtube.svg'
 import { useState } from "react"
 import firebase from '../firebase'
 import { Link } from 'react-router-dom'
@@ -29,11 +31,12 @@ const Register = () => {
     }
 
     return (
-        <>
-            <h2>Register</h2>
+        <div className='form__wrapper'>
+        <img src={youtube} alt="youtube" className='text-center w-[80px] register__logo' />
+            <h2 className='register__title text-center font-black text-[40px] mb-4'>Register</h2>
             {error}
-            <form onSubmit={handleSubmit}>
-                <label>
+            <form onSubmit={handleSubmit} className='register__form'>
+                <label><br/>
                     Email: <input type="email" value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} />
                 </label>
                 <label>
@@ -43,10 +46,10 @@ const Register = () => {
                     <input type="password" value={confirmPassword} placeholder="confirm password"
                         onChange={(e) => setConfirmPassword(e.target.value)} />
                 </label>
-                <button type="submit">Submit</button>
+                <button type="submit" className='form__btn font-bold'>Submit</button>
             </form>
-            <Link to='/login'>Accoutingiz bormi? bosing</Link>
-        </>
+            <Link to='/login' className='form__link text-cyan-600'>Accoutingiz bormi? bosing</Link>
+        </div>
 
     )
 }

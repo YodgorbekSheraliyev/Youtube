@@ -2,13 +2,13 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyAHMvC-ZJaKEKaYrlho8txKRVXHGIgUYBM",
-  authDomain: "auth-lesson-55.firebaseapp.com",
-  projectId: "auth-lesson-55",
-  storageBucket: "auth-lesson-55.appspot.com",
-  messagingSenderId: "700281087864",
-  appId: "1:700281087864:web:5f06b9f21a596f6f688a8d",
-  measurementId: "G-X86THT2ZKC",
+  apiKey: "AIzaSyBc_eE3YrlAuUJL8n2DdoArmZVQRNcOf4w",
+  authDomain: "fir-6516d.firebaseapp.com",
+  projectId: "fir-6516d",
+  storageBucket: "fir-6516d.appspot.com",
+  messagingSenderId: "1029520074250",
+  appId: "1:1029520074250:web:3c345111178a8cc05c61f3",
+  measurementId: "G-B16XC9LFZ3"
 });
 
 const auth = app.auth();
