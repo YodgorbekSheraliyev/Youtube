@@ -16,7 +16,7 @@ const options = {
     id: 'PLMC9KNkIncKseYxDN2niH6glGRWKsLtde'
   },
   headers: {
-    // 'X-RapidAPI-Key': '855d5d8df8mshc77cd35022f584fp1b569bjsn0fd0c1d52fcd',
+    'X-RapidAPI-Key': '855d5d8df8mshc77cd35022f584fp1b569bjsn0fd0c1d52fcd',
     'X-RapidAPI-Host': 'youtube-v3-alternative.p.rapidapi.com'
   }
 };
