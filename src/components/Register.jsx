@@ -1,9 +1,11 @@
 import './register.css';
 import youtube from '../assets/icons/youtube.svg'
-import { useState } from "react"
+import { useContext, useState } from "react"
 import firebase from '../firebase'
 import { Link } from 'react-router-dom'
+import { MyContext } from './Context/UseContext';
 const Register = () => {
+    const {setIsRegister} = useContext(MyContext)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -27,7 +29,8 @@ const Register = () => {
         }
         setEmail('');
         setPassword('')
-        setConfirmPassword('')
+        setConfirmPassword('');
+        setIsRegister(false)
     }
 
     return (
@@ -46,7 +49,7 @@ const Register = () => {
                     <input type="password" value={confirmPassword} placeholder="confirm password"
                         onChange={(e) => setConfirmPassword(e.target.value)} />
                 </label>
-                <button type="submit" className='form__btn font-bold'>Submit</button>
+                <button type="submit" className='form__btn font-bold' >Submit</button>
             </form>
             <Link to='/login' className='form__link text-cyan-600'>Accoutingiz bormi? bosing</Link>
         </div>

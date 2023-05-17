@@ -1,50 +1,35 @@
+import { MyContext } from "../Context/UseContext";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 import menu from "../../assets/icons/menu.svg";
 import youtube from "../../assets/icons/youtube.svg";
-import search from "../../assets/icons/search.svg";
-import video from "../../assets/icons/video.svg";
-import dots from "../../assets/icons/dots.svg";
-import notification from "../../assets/icons/notification.svg";
 import account from "../../assets/icons/account.jpg";
+import {FiSun} from 'react-icons/fi';
+import {BsMoon} from 'react-icons/bs'
 
 const Navbar = () => {
+  const {dark, handleTheme, searchText, setSearchText} = useContext(MyContext)
   return (
-    <nav className="nav">
+    <nav className={dark? 'dark__nav nav':'nav'} >
       <ul className="nav__list flex  ">
         <li className="nav__item nav__item-menu">
-          <img src={menu} alt="menu" className="burger__menu"/>
-          <img src={youtube} alt="youtube" className="youtube__logo" />
-          <span className="text-red ">YouTube</span>
+          <img src={menu} alt="menu" className={`burger__menu ${dark? 'light':'dark'}`}/>
+          <Link to='/'><img src={youtube} alt="youtube" className="youtube__logo" /></Link>
+          <Link to='/'><span className={dark? 'light':'dark'}>YouTube</span></Link>
         </li>
         <li className="nav__item nav__item-searchbar">
           <input
             type="text"
             placeholder="Searchch"
-            className="searchbar__input"
+            className="searchbar__input" value={searchText} onChange={(e)=> setSearchText(e.target.value)}
           /><br/>
-          <img src={search} alt="search" className="searchbar__img" />
         </li>
-        <li className="nav__item nav__item-icon-wrapper flex">
-          <img
-            className="nav__icon-right nav__icon-right-video"
-            src={video}
-            alt="icons"
-          />
-          <img
-            className="nav__icon-right nav__icon-right-dots"
-            src={dots}
-            alt="icons"
-          />
-          <img
-            className="nav__icon-right nav__icon-right-notification"
-            src={notification}
-            alt="icons"
-          />
-          <img
+        <li className="nav__item nav__item-icon-wrapper flex justify-end">
+          <span onClick={handleTheme} className="mr-[15px]">{dark ? <FiSun className="light"/> : <BsMoon/>}</span>
+        <img
             className="nav__icon-right nav__icon-right-profile"
-            src={account}
-            alt="icons"
-          />
+            src={account} alt="icons" />
         </li>
       </ul>
     </nav>

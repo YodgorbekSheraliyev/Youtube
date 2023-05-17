@@ -1,7 +1,13 @@
+
 .nav {
   position: fixed;
   top: 0;
   width: 100%;
+  /* background-color: black; */
+  background-color: #fff;
+  z-index: 1000;
+}
+.dark__nav {
   background-color: #454545;
 }
 .nav__list,
@@ -30,11 +36,7 @@
   position: relative;
   width: 75%;
 }
-.searchbar__img {
-  position: relative;
-  left: 54%;
-  transform: translateY(-50%);
-}
+
 .searchbar__input {
   position: absolute;
   top: 50%;

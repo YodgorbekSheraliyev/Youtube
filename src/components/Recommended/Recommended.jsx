@@ -1,66 +1,41 @@
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import './recommended.css';
-
-import axios from "axios";
-import { Pagination, Navigation } from "swiper";
-
 // Import Swiper styles
 import "swiper/css";
 // import "swiper/css/pagination";
 import "swiper/css/navigation";
+import useFetchHook from "../FetchHook/useFetchHook";
+import { Link } from "react-router-dom";
+import { MyContext } from '../Context/UseContext';
+import { useContext } from 'react';
 
 const options = {
-    method: 'GET',
-    url: 'https://youtube-v3-alternative.p.rapidapi.com/related',
-    params: {
-      id: 'dQw4w9WgXcQ',
-      geo: 'US',
-      lang: 'en'
-    },
-    headers: {
-    //   'X-RapidAPI-Key': 'b2839a24a6msh4f07be37487e920p163410jsn2698962370a6',
-      'X-RapidAPI-Host': 'youtube-v3-alternative.p.rapidapi.com'
-    }
-  };
+  method: 'GET',
+  url: 'https://youtube-v3-alternative.p.rapidapi.com/playlist',
+  params: {
+    id: 'PLMC9KNkIncKseYxDN2niH6glGRWKsLtde'
+  },
+  headers: {
+    // 'X-RapidAPI-Key': '855d5d8df8mshc77cd35022f584fp1b569bjsn0fd0c1d52fcd',
+    'X-RapidAPI-Host': 'youtube-v3-alternative.p.rapidapi.com'
+  }
+};
 
 export default function Recommended() {
-  const [data, setData] = useState([]);
-  const bringData = async () => {
-    try {
-      const response = await axios.request(options);
-    //   console.log(response.data.data);
-      setData(response.data.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-  bringData();
+  const {dark} = useContext(MyContext)
+   const {data} =  useFetchHook(options)
   return (
-    <>
-      <Swiper
-        slidesPerView={4}
-        spaceBetween={10}
-        loop={false}
-        pagination={{ clickable: true }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {data.slice(1,15).map((video, index) => (
-          <SwiperSlide key={index} className="my-slide">
-            <div className="video w-[250px] h-[210px] border-2 border-solid border-stone-950 mx-3 relative">
-              <img src={video.thumbnail[1]} alt={video.videoOwnerChannelTitle} className="video__img w-full h-[110px]  "  />
-              <h5 className="text-left font-extrabold">{video.channelTitle}</h5>
-              <div className="video__info-wrapper flex justify-between text-xs font-medium  ">
-                <span>{video.videoInfo}</span>
-                <span>{video.publishedText}</span>
+    <div className="flex justify-between flex-wrap gap-y-[20px] ">
+        {data.slice(35,55).map((video, index) => (
+            <div key={index} className="recommended video w-[310px] h-[210px]  mx-3 relative">
+             <Link to={`/playlist/video/${video.videoId}/${video.title}/${video.videoInfo}`}> <img src={video.thumbnail[1].url} alt={video.videoOwnerChannelTitle} className="video__img w-full h-[170px]  "  /></Link>
+              <h5 className={`text-left font-extrabold ${dark? 'light':'dark'}`}>{video.channelTitle}</h5>
+              <div className={`video__info-wrapper flex justify-between text-xs font-medium ${dark ? 'light':'dark'} `}>
+                <span className={dark ? 'light':'dark'}>{video.videoInfo}</span>
+                <span className={dark ? 'light':'dark'}>{video.publishedText}</span>
               </div>
-              <span className="video__length absolute top-[120px] right-[10px]">{video.lengthText}</span>
+              <span className={`video__length absolute top-[120px] right-[10px] ${dark? "light":"dark"}`}>{video.lengthText}</span>
             </div>
-          </SwiperSlide>
         ))}
-      </Swiper>
-    </>
+    </div>
   );
 }
